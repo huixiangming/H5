@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>biaodan</title>
+    <style type="text/css">
+    #a{
+        color:red;
+    }
+    #b{
+        width:500px;
+    }
+    #c{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <h1>毕业生信息</h1>
+    <form method="get">
+        <fieldset id="b">
+            <legend id="a">学生信息</legend>      
+            姓&nbsp;&nbsp;名&nbsp;
+            <input type="text" required="required" placeholder="请输入姓名" name="area1"/>
+            <span id="c">*</span><br/>
+            学&nbsp;&nbsp;号&nbsp;
+            <input type="number" required="required" placeholder="请输入学号" name="area2"/>
+            <span id="c">*</span><br/>
+            手&nbsp;&nbsp;机&nbsp;
+            <input type="tel" required="required" placeholder="请输入手机号" name="area3"/>
+            <span id="c">*</span><br/>
+            邮&nbsp;&nbsp;箱&nbsp;
+            <input type="email" required="required" placeholder="请输入邮箱地址" name="area4"/>
+            <span id="c">*</span>  
+        </fieldset>
+        <br/>
+        <fieldset id="b">
+            <legend id="a">录取情况</legend>      
+            录取学校&nbsp;<input type="search" name="name1"/> <br/>
+            入学成绩&nbsp;<input type="search" name="name2"/><br/>
+            入学时间&nbsp;<input type="date" name="name3"/>
+        </fieldset>
+        <br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
