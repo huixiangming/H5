@@ -1,1 +1,57 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      #a{
+        width: 350px;
+      }
+      #memo{
+        height: 40px;
+        border-color: rgb(255, 208, 0);
+      }
+      #b{
+        height: 30px;
+        width: 140px;
+      }
+      #c{
+        color:whitesmoke;
+      }
+    </style>
+</head>
+<body>
+  <div id="a">
+  <input id="memo" placeholder="请输入想查找的商品">
+  <input id="b" type="button" value="搜索" onclick="saveStorage('memo');" />  
+</br>
+  <a>最近搜索</a>
+  <p id="msg"></p>
+  <input id="c" type="button" value="X" onclick="clearStorage('msg');" />
+</div>
+</body>
+<script>
+  function saveStorage(id) {
+        var data = document.getElementById(id).value;
+        localStorage.setItem(memo.value,data);
+        loadStorage('msg');
+    }
+    function loadStorage(id) {
+        var result = '';
+            for (var i = 0; i < localStorage.length; i++){
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            result += value+"&nbsp";
+        }
+        result += '';
+        var target = document.getElementById(id);
+        target.innerHTML = result;
+    }
+    function clearStorage() {
+        localStorage.clear();
+        loadStorage('msg');
+    }
+</script>
+</html>
