@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            position: absolute;
+            left: 500px;
+            top: 200px;
+            display: block;
+        }
+        #a{
+            position: absolute;
+            left:520px;
+            top: 200px;
+        }
+        body{
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /*boby{}为百度内容，可以禁止图片被选中*/
+    </style>
+</head>
+<body>
+    <div id="a"><img src="邓超.jpg" height="150" alt="cnn"/></div> 
+    <canvas id="canvas" width="180" height="150"></canvas>
+</body>
+    <script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    //绘制渐变色的长方形
+    var grdient = context.createLinearGradient(0,0,0,150);
+    grdient.addColorStop('0','red');
+    grdient.addColorStop('0.5','black');
+    grdient.addColorStop('1','yellow');
+    context.strokeStyle=grdient;
+    context.lineWidth= 200;
+    context.strokeRect(0, 0, 180, 150);
+    //鼠标按下时刮
+    canvas.onmousedown=function(ev)
+    {
+    var ev=ev||window.event;
+    context.globalCompositeOperation ='destination-out';
+    context.fillStyle = "white";
+    context.arc(ev.clientX-500,ev.clientY-200,20, 0, 2 * Math.PI);
+    context.fill();
+    //鼠标按下后并移动时刮
+    canvas.onmousemove=function(ev){
+    var ev=ev||window.event;
+    context.globalCompositeOperation ='destination-out';
+    context.fillStyle = "white";
+    context.arc(ev.clientX-500,ev.clientY-200,20, 0, 2 * Math.PI);
+    context.fill();
+    //刮完85%时全部显示
+    var imageData = context.getImageData(0, 0, 180, 150);
+        for(i=3,a=0; i<imageData.data.length; i+=4){
+            if(imageData.data[i] == 0){
+                a+=1;
+                if(a==22950){
+                    for (var b = 3; b < imageData.data.length; b += 4) {
+                        imageData.data[b] = 0;
+                        }
+                    context.putImageData(imageData, 0, 0);
+                  }  
+            }  
+        }
+    }
+    }
+    //鼠标松开时不刮
+    canvas.onmouseup=function(ev){
+        canvas.onmousemove=null;   
+    }
+    </script>
+</html>
