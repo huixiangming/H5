@@ -49,13 +49,6 @@
     context.fillStyle = "white";
     context.arc(ev.clientX-500,ev.clientY-200,20, 0, 2 * Math.PI);
     context.fill();
-    //鼠标按下后并移动时刮
-    canvas.onmousemove=function(ev){
-    var ev=ev||window.event;
-    context.globalCompositeOperation ='destination-out';
-    context.fillStyle = "white";
-    context.arc(ev.clientX-500,ev.clientY-200,20, 0, 2 * Math.PI);
-    context.fill();
     //刮完85%时全部显示
     var imageData = context.getImageData(0, 0, 180, 150);
         for(i=3,a=0; i<imageData.data.length; i+=4){
@@ -69,6 +62,13 @@
                   }  
             }  
         }
+    //鼠标按下后并移动时刮
+    canvas.onmousemove=function(ev){
+    var ev=ev||window.event;
+    context.globalCompositeOperation ='destination-out';
+    context.fillStyle = "white";
+    context.arc(ev.clientX-500,ev.clientY-200,20, 0, 2 * Math.PI);
+    context.fill();
     }
     }
     //鼠标松开时不刮
