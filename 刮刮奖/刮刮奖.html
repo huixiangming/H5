@@ -54,7 +54,7 @@
         for(i=3,a=0; i<imageData.data.length; i+=4){
             if(imageData.data[i] == 0){
                 a+=1;
-                if(a==22950){
+                if(a==(canvas.offsetWidth*canvas.offsetHeight*0.85)){
                     for (var b = 3; b < imageData.data.length; b += 4) {
                         imageData.data[b] = 0;
                         }
@@ -74,7 +74,7 @@
         for(i=3,a=0; i<imageData.data.length; i+=4){
             if(imageData.data[i] == 0){
                 a+=1;
-                if(a==22950){
+                if(a==(canvas.offsetWidth*canvas.offsetHeight*0.85)){
                     for (var b = 3; b < imageData.data.length; b += 4) {
                         imageData.data[b] = 0;
                         }
