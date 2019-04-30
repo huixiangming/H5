@@ -11,7 +11,6 @@
             left: 500px;
             top: 200px;
             display: block;
-            background: url(邓超.jpg);
         }
         #a{
             position: absolute;
@@ -33,6 +32,7 @@
     <script>
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
+    
     //绘制渐变色的长方形
     var grdient = context.createLinearGradient(0,0,0,150);
     grdient.addColorStop('0','red');
@@ -88,5 +88,10 @@
     canvas.onmouseup=function(ev){
         canvas.onmousemove=null;   
     }
+    //刷新页面时更新图片
+    var c=['迪丽热巴.jpg','邓超.jpg','彭于晏.jpg','地球.jpg','H5.jpg']
+    var index =parseInt(Math.random()*(c.length));
+    var currentImage=c[index];
+    document.getElementById("canvas").style.backgroundImage="url("+currentImage+")";
     </script>
 </html>
