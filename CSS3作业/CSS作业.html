@@ -9,8 +9,35 @@
         #a{
             height: 438px;
             width: 378px;
-            border: solid 5px rgba(128, 128, 128, 0.192);
-            overflow: hidden;
+            border:3px solid rgb(228, 226, 231);
+            border-bottom: 5px solid rgb(228, 226, 231);
+            border-right: 5px solid rgb(228, 226, 231);
+            overflow: hidden;      
+        }
+        @keyframes b{
+            0%{
+                border:3px solid rgb(228, 226, 231);
+            border-bottom: 5px solid rgb(228, 226, 231);
+            border-right: 5px solid rgb(228, 226, 231);
+            }
+            30%{
+                border:3px solid rgb(205, 203, 207);
+            border-bottom: 5px solid rgb(205, 203, 207);
+            border-right: 5px solid rgb(205, 203, 207);
+            }
+            70%{
+                border:3px solid rgb(205, 203, 207);
+            border-bottom: 5px solid rgb(205, 203, 207);
+            border-right: 5px solid rgb(205, 203, 207);
+            }
+            100%{
+                border:3px solid rgb(228, 226, 231);
+            border-bottom: 5px solid rgb(228, 226, 231);
+            border-right: 5px solid rgb(228, 226, 231);
+            }
+        }
+        #a:hover{
+            animation: b 2s ease-out;
         }
         #b{
             height: 250px;
@@ -18,8 +45,7 @@
             background-image: url(zhanqiao.jpg);
             background-size: contain;
             z-index: 1;
-        }
-        
+        }  
         #a:hover #b{
             animation: hah 2s ease-out;
         }
@@ -213,6 +239,6 @@
         <div id="j">
             10分钟前&nbsp&nbsp&nbsp&nbsp&nbsp123评论
         </div>
-    </div> 
+    </div>
 </body>
 </html>
