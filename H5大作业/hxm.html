@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>导航条</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <style>
+      @media screen and (max-width: 768px) {
+        .container2{
+          display: none;
+        }
+        body{
+          background-color: rgb(245,245,245);
+          height: 4700px;
+        }
+        .top0{
+          display: none;
+        }
+        .lunbo{
+          height: 365px;
+        }
+        .a{
+          position: absolute;
+          left: 5%;
+        top: 17%;
+        width: auto;
+        font-size: 40px;
+        color: rgb(255,255,255,0.85);
+        }
+        .b{
+          display: none;
+        }
+        .c{
+          display: none;
+        }
+        .d{
+          position: absolute;
+          left: 5%;
+        top: 35%;
+        width: auto;
+        font-size: 30px;
+        color: rgb(255,255,255,0.85);
+        }
+        .left{
+          display: none;
+        }
+        .right{
+          display: none;
+        }
+        .xian{
+          display: none;
+        }
+        .banner{
+          height: 365px;
+        } 
+        .form{
+        position: absolute;
+        left: 5%;
+        top: 74%;
+        height: 58px;
+        width: 90%;
+        font-size: 17px;
+        border-radius: 20px;
+        border:solid 5px rgba(14, 14, 15, 0.5);
+        color: rgb(83,83,83);
+      }
+      .container1{
+        display: none;
+      }
+      .c1phone{
+        background-color: white;
+        height: 200px;
+        position: relative;
+        padding-top: 5%;
+        padding-left: 5%;
+        top: 118px;
+      }
+      .top2{
+        top: 88px;
+      }
+      .top1{
+        position: fixed;
+        height: 88px;
+        z-index: 99;
+        background-color: white;
+        width: 100%;
+      }
+      a,a:hover{
+        color: black;
+      }
+      .active a{
+        color: rgb(203,84,5);
+        border-bottom: 3px solid rgb(203, 84, 5);
+      }
+      .c2phone{
+        position: relative;
+        top: 150px;
+        height: 1070px;
+        background-color: white;
+      }
+      .remen{
+        position: relative;
+        width: 90%;
+        top: 50%;
+        left: 5%;
+        padding-top: 0px;
+        background-color: white;
+        border-bottom:2px solid rgb(221,221,221);
+      }
+      .remenh1{
+        border-left: 3px solid rgb(203, 84, 5);
+        padding-left: 15px;
+      }
+      .remen0{    
+        height: 100px;
+        width: auto;
+        position: relative;
+        top: 130px;
+        background-color: white;
+      }
+      .remen2{
+        display: none;
+      }
+      .shiming{
+        position: relative;
+        height: 100%;
+        width: 90%;
+        left: 5%;
+        padding-top: 0px;
+        background-color: white;
+        border-bottom:2px solid rgb(221,221,221);
+        overflow: hidden;
+      }
+      .shiming0{
+        height: 100px;
+        width: auto;
+        position: relative;
+        top: 150px;
+        background-color: white;
+      }
+      .shiming1{
+        position: relative;
+        float: left;
+        top: 19%;
+        border-left: 3px solid rgb(203, 84, 5);
+        padding-left: 15px;
+      }
+      .shiming3{
+        position: relative;
+
+        float: left;
+        top: 45%;
+        font-size: 25px;
+      }
+      .shiming2{
+        display: none;
+      }
+      .tuijian{
+        position: relative;
+        width: 90%;
+        top: 50%;
+        left: 5%;
+        padding-top: 0px;
+        background-color: white;
+        border-bottom:2px solid rgb(221,221,221);
+      }
+      .tuijian1{
+        border-left: 3px solid rgb(203, 84, 5);
+        padding-left: 15px;
+      }
+      .tuijian0{
+        
+        height: 100px;
+        width: auto;
+        position: relative;
+        top: 130px;
+        background-color: white;
+      }
+      .tuijian2{
+        display: none;
+      }
+      .tuijian3{
+        display: none;
+      }
+      .container3{
+        display: none;
+      }
+      .gengduo0{
+        display: none;
+      }
+      .cnmb{
+        display: none;
+      }
+      .cnm{
+        display: none;
+      }
+      .jb{
+        position: relative;
+        top: -450px;
+        height: 330px;
+      }
+      .back{
+        position: relative;
+        top: 150px;
+        width: 100%;
+        height: 686px;
+      }
+      .linian{
+        height: 270px;
+        width: 100%;
+        position: relative;
+        top: -400px;
+        font-size: 20px;
+      }
+      .mission2{
+        position: relative;
+        width: 100%;
+        top: -400px;
+        height: 327px;
+      }
+      .zuihou{
+        position: relative;
+        height: 645px;
+        top: -400px;
+        font-size: 20px;
+      }
+      .zuihou1{
+        position: relative;
+        height: 40%;
+      }
+      .zuihou2{
+        position: relative;
+        height: 32%;
+      }
+      .zuihou3{
+        position: relative;
+        height: 28%;
+      }
+      .bottomphone{
+        position: relative;
+        height: 300px;
+        top: -350px;
+        width: 100%;
+        background-color: black;
+        color: white;
+      }
+      .bottom{
+        display: none;
+      }
+      }
+      @media screen and (min-width:768px){
+        .navbar-fixed-top{
+          display: none;
+        }
+        body{
+          background-color: rgb(221,221,221);
+          height: 5210px;
+        }
+        .c1phone{
+          display: none;
+        }
+        ul{
+          width: 60%;
+          height: 50px;
+          float: right;
+        }
+        li{
+          position: relative;
+          font-size: 20px;
+          margin-left: 7%; 
+          top: 10%;
+        }
+        .a{
+        position: absolute;
+        left: 14%;
+        top: 17%;
+        height: 100px;
+        width: auto;
+        font-size: 40px;
+        color: rgb(255,255,255,0.85);
+      }
+      .b{
+        position: absolute;
+        left: 14%;
+        top: 37%;
+        height: 100px;
+        width: auto;
+        font-size: 18px;
+        color: rgb(255,255,255,0.85);
+      }
+      .c{
+        position: absolute;
+        left: 14%;
+        top: 46%;
+        height: 100px;
+        width: auto;
+        font-size: 18px;
+        color: rgb(255,255,255,0.85);
+      }
+      .d{
+        display: none;
+      }
+      .e{
+        position: absolute;
+        left: 55%;
+        top: 6%;
+        color: white;
+        height: 20%;
+        width: 40%;
+      }
+      .e span{
+        position: relative;
+        float: left;
+      }
+      .xian{
+          position: absolute;
+          left: 14%;
+          top: 35%;
+          height: 1px;
+          width: 21%;
+          background-color: rgb(255,255,255,0.5);
+      }
+      .xian2{
+          position: absolute;
+          left: 14%;
+          top: 53%;
+          height: 1px;
+          width: 25%;
+          background-color: rgb(255,255,255,0.5);
+      }
+      .top{
+        position: absolute;
+        width: 500px;
+        height: 40px;
+        color: white;
+        font-size: 20px;
+        top: 8%;
+        left: 65%;
+      }
+      .banner{
+        height: 450px;
+      }
+      .form{
+        position: absolute;
+        left: 29%;
+        top: 74%;
+        height: 58px;
+        width: 41.7%;
+        font-size: 16px;
+        border-radius: 20px;
+        border:solid 5px rgb(14, 14, 15, 0.5);
+        color: rgb(83,83,83);
+      }
+      .container1{
+        position: relative;
+        height: 364px;
+        top: 155px;
+        background-color: rgb(20,49,109);
+        padding: 0px;
+      }
+      a,a:hover{
+        color: black;
+      }
+      .active a{
+        color: rgb(203,84,5);
+        border-bottom: 3px solid rgb(203, 84, 5);
+      }
+      .top0{
+        position: fixed; 
+        background-color: black;
+        width: 100%;
+        height: 40px;
+      }
+      .top1{
+        position: fixed;
+        width: 100%;
+        top:40px;
+        padding-left: 100px;
+        background-color: rgb(225,225,225);
+        z-index: 99;
+      }
+      .top2{
+        top: 110px;
+      }
+      .c2phone{
+        display: none;
+      }
+      .shiming0{
+        top: 665px;
+        height: 100px;
+        width: auto;
+        position: relative;
+      }
+      .shiming{
+        height: 100px;
+        width:300px;
+        position: relative;
+        float: left; 
+        left: 45%;
+      }
+      .shiming3{
+        display: none;
+      }
+      .remen{
+        height: 100px;
+        width:300px;
+        position: relative;
+        float: left; 
+        left: 45%;
+      }
+      .remen0{
+        top: 165px;
+        height: 100px;
+        width: auto;
+        position: relative;
+      }
+      .gengduo0{
+        top: 165px;
+        height: 100px;
+        width: auto;
+        position: relative;
+      }
+      .tuijian{
+        height: 100px;
+        width:300px;
+        position: relative;
+        float: left; 
+        left: 45%;
+      }
+      .tuijian0{
+        top: 195px;
+        height: 150px;
+        width: auto;
+        position: relative;
+      }
+      .tuijian3{
+        font-size: 15px;
+        position: absolute;
+        top: 105px;
+        left: 38%;
+      }
+      .haha{
+        display: none;
+      }
+      .cnm{
+        position: relative; 
+        width: 100%;
+        top: 100px;
+      }
+      .back{
+        display: none;
+      }
+      .jb{
+        display: none;
+      }
+      .mission2{
+        display: none;
+      }
+      .linian{
+        display: none;
+      }
+      .zuihou{
+        display: none;
+      }
+      .bottomphone{
+        display: none;
+      }
+      .bottom{
+        position: relative;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 530px;
+        top: -490px;
+      }
+      .ken1>ul>li {
+	    padding:0;
+	    margin:8px;
+	    list-style:none;
+        float: left;
+        width: auto;
+        text-align: center;
+        font-size:12px;
+	    }
+     .ken3>ul>li {
+	    margin:8px;
+	    list-style:none;
+        float: left;
+        width: auto;
+        text-align: center;
+        font-size:12px;
+        }
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#nav">
+        <div class="top0" style="z-index: 99;">
+          <div class="top">
+              <span class="glyphicon glyphicon-headphones"></span>
+              400-808-8682&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp请登录&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp注册
+          </div>
+        </div>
+        <div class="container top1">
+          <nav class="navbar" id="nav">
+            <div class="navbar-header"> 
+              <button type="button" class="navbar-toggle"
+              data-toggle="collapse" data-target="#col-1" style="top: 5px;right: 3%;">
+                <span class="icon-bar" style="background-color: black;height:5px;width: 50px;"></span>
+                <span class="icon-bar" style="background-color: rgb(255,255,255);height:5px;width: 50px;"></span>
+                <span class="icon-bar" style="background-color: black;height:5px;width: 50px;"></span>
+                <span class="icon-bar" style="background-color: rgb(255,255,255);height:5px;width: 50px;"></span>
+                <span class="icon-bar" style="background-color: black;height:5px;width: 50px;"></span>
+              </button>
+              <button type="button" class="navbar-toggle"
+              data-toggle="collapse" 
+              style="background-color: rgb(232,66,10);right: 30px;border-radius: 10px;
+              color: white;top: 5px;width: 200px;height: 60px;font-size: 30px;">快速定制</button>
+              <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="collapse navbar-collapse" style="height: 100%;" id="col-1">
+              <ul class="nav navbar-nav" style="background-color: rgb(221,221,221);">
+                <li class="active" style="width:10%;"><a href="#generic">首页</a></li>
+                <li style="width:17%;"><a href="#remen">热门路线</a></li>
+                <li style="width:17%;"><a href="#tuijian">签证推荐</a></li>
+                <li style="width:17%;"><a href="#shiming">使命愿景</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div id="generic" class="carousel slide banner lunbo top2" data-ride="carousel" 
+        data-interval='100000'>
+            <div class="carousel-inner"  style="height: 100%;">
+                <div class="item active"  style="height: 100%;">
+                    <img src="img/banner.jpg" alt="First slide" style="height: 100%;"> 
+                </div>
+                <div class="item" style="height: 100%;">
+                    <img src="img/banner2.jpg" alt="Second slide" style="height: 100%;">
+                </div>
+                <a class="left carousel-control" href="#generic" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#generic" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <span class="a">悠游古欧洲&nbsp&nbsp&nbsp&nbsp遍览德法瑞意</span>
+            <span class="xian"></span>
+            <span class="b">巴黎卢浮宫，塞纳河游船，凡尔赛宫</span>
+            <span class="c">少女峰，大运河游船，金色列车，西庸城堡</span>
+            <span class="xian2"></span>
+            <span class="d">全程升级热早+1晚5星酒店</span>
+            <form class="form">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-3" style="border-top-left-radius:15px;border-bottom-left-radius:15px;height: 100%; background-color: rgb(211,211,216)">
+                <img src="img/position.png" alt="" style="position: relative;left: 13%; top:22%;">
+                <span style="position: relative; top:27%; left:18%;">目的地</span>
+              </div>
+              <input class="col-lg-6 col-md-5 col-sm-5 col-xs-6" style="height: 100%;" type="text" placeholder=" |  日本  美国  英国  地中海"/>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"  type="submit" style="border-top-right-radius:15px;border-bottom-right-radius:15px;height: 100%; background-color:rgb(203, 84, 5)">
+              <img src="img/search.png" alt="" style="position: relative; top: 15%;left: 40%;"></div>
+            </form>
+        </div>
+        <div class="container container1">
+          <div style="position: relative;float: left;width: 80%;height: 100%;">
+            <img src="img/Sbanner2.jpg" alt="" style="height:100%;" class="img-responsive">
+            <div class="e">
+              <h1 style="font-size:40px;">机场接送&nbsp&nbsp省钱省心</h1>
+              <span style="font-size: 20px">提供上海，无锡，苏州各市</span>
+              <span style="font-size: 20px">往返机场，码头接送服务，更有包车服务</span>
+            </div>
+          </div>
+          <div style="position: relative;float: left; left: 6%;top: 20%;height: 140px;">
+          <img src="img/car.png" alt="" style="position: relative;" class="img-responsive">
+          <div style="position: relative;font-size: 20px;color: white;left: 10%;top: 20%;">车辆接送</div>
+          </div>
+          <div style="position: relative; text-align: center; float: left; height: 55px;width: 15%;
+          top: 30%;padding-top: 8px; left:3%;color: white; border-radius: 20px;border:solid 5px white;font-size: 20px;">
+            查看详情
+          </div>
+        </div>
+        <div class="c1phone">
+          <img src="img/carH.png" alt="" style="float: left; position: relative;">
+          <div style="float: left; position: absolute;width: 60%;left: 22%;">
+              <span style="font-size: 30px;float: left; position: relative;color: rgb(28,80,128)">机场接送&nbsp&nbsp省心省力</span>
+              <span style="font-size: 20px;color: rgb(102,102,102);position: relative;
+              float: left;top: 10px;">提供上海，无锡，苏州各市</span>
+              <span style="font-size: 20px;color: rgb(102,102,102);position: relative;
+              float: left;top: 10px;">往返机场，码头接送服务，更有包车服务</span>
+          </div>
+          <button style="float: left; position: absolute;font-size: 30px;
+          border: 1px solid rgb(102,102,102);width: 25%;height: 30%;background-color: white;
+          top: 28%;border-radius: 10px;color: rgb(102,102,102);left: 70%;">
+            查看详情
+          </button>
+        </div>
+        <div class="remen0">
+        <div id="remen" class="remen">
+          <h1 class="remenh1">热 门 线 路</h1>
+          <span class="remen2">&nbsp&nbspPopular tourist routes</span>
+        </div>
+        </div>
+        <div class="container container2" style="position: relative; top: 180px;height: 890px;width: 85%;">
+            <div style="position: relative;height: 100%;width:50%;float: left;">
+              <div style="position: relative;height: 50%;">
+                  <img src="img/hot1.jpg" alt="..." style="position: relative;width: 100%;height: 85%;" / >
+                  <div style="background-color: black;color: white; height: 73px;padding-top: 5px;padding-left: 35px;">
+                    <span style="position: relative;font-size: 17px;">海南三亚5天4晚，纯玩,4晚红树林度假王国</span>
+                    <span style="position: absolute;bottom: 1%; left: 6%;">￥<span style="font-size: 25px;">2580</span>  / 人起</span>
+                  </div>
+              </div>
+              <div style="position: relative;height: 50%;">
+                  <img src="img/hot2.jpg" alt="..." style="position: relative;width: 100%;height: 85%;" />
+                      <div style="background-color: black;color: white;height: 73px;padding-top: 5px;
+                      padding-left: 35px;position: absolute;bottom: 0px;width: 100%;">
+                          <span style="position: relative;font-size: 17px;">德法意瑞欧洲4国，ABCD任意线路由您挑选</span>
+                          <span style="position: absolute;top: 40%; left: 6%;">￥<span style="font-size: 25px;">7999</span>  / 人起</span>
+                      </div>
+              </div>
+            </div>
+            <div style="position: relative;height: 100%;width:50%;float: left;">
+                  <div style="position: relative; width: 100%;height: 33.3%;">
+                      <img src="img/hot3.jpg" alt="..." style="position: relative;width: 100%;height: 100%;" />
+                      <div style="background-color: rgba(0, 0, 0, 0.473);color: white;height: 73px;padding-top: 10px;
+                    padding-left: 35px;position: absolute;bottom: 0%;width: 100%;z-index: 98;">
+                        <span style="position: relative;font-size: 17px;">曼谷+芭提雅 国际五星 赠送2220大礼包，绝无自费</span>
+                        <span style="position: absolute;top: 40%; left: 6%;">￥<span style="font-size: 25px;">2799</span>  / 人起</span>
+                    </div>
+                  </div>
+                    <div style="position: relative; width: 100%;height: 33.3%;">
+                        <img src="img/hot4.jpg" alt="..."/ style="position: relative; position: relative;width: 100%;height: 100%;">
+                        <div style="background-color: rgba(0, 0, 0, 0.473);color: white;height: 73px;padding-top: 5px;
+                    padding-left: 35px;position: absolute;bottom: 0%;width: 100%;z-index: 98;">
+                        <span style="position: relative;font-size: 17px;">日本本州游 樱花，寿司，温泉，美食</span>
+                        <span style="position: absolute;top: 40%; left: 6%;">￥<span style="font-size: 25px;">5399</span>  / 人起</span>
+                    </div>
+                    </div>
+                    <div style="position: relative; width: 100%;height: 33.4%;">
+                        <div style="background-color: rgba(0, 0, 0, 0.473);color: white;height: 73px;padding-top: 5px;
+                        padding-left: 35px;position: absolute;bottom: 0%;width: 100%;z-index: 98;">
+                            <span style="position: relative;font-size: 17px;">斯里兰卡7天6晚全景游 保证入住2晚香格里拉</span>
+                            <span style="position: absolute;top: 40%; left: 6%;">￥<span style="font-size: 25px;">2799</span>  / 人起</span>
+                        </div>                 
+                      <img src="img/hot5.jpg" alt="..."/ style="position: relative; position: relative;width: 100%;height: 100%;">
+                    </div>
+            </div>
+        </div> 
+        <div style="position: relative; height: 1050px;top: 130px;background-color: white;" class="haha">
+        <div style="position: relative; height: 460px;background-color: white;width: 95%;
+        padding-top: 20px;padding-left: 40px;">
+          <img src="img/hot1.jpg" alt="" style="width: 100%;height: 100%;">
+          <div style="position: absolute;bottom: 0px;width: 94.5%;height: 115px;padding-left: 10px;
+          background-color: rgba(0, 0, 0, 0.541);color: white;">
+            <h2>海南三亚5天4晚</h2>
+            <h2>纯玩，4晚红树林度假王国</h2>
+            <h4 style="position: absolute;bottom: 20px;right: 20px;">￥<span style="font-size: 40px;">2580</span>/人起</h4>
+          </div>
+        </div>
+        <div style="position: relative; height: 460px;background-color: white;width: 95%;
+        padding-top: 20px;padding-left: 40px;">
+          <img src="img/hot2.jpg" alt="" style="width: 100%;height: 100%;">
+          <div style="position: absolute;bottom: 0px;width: 94.5%;height: 115px;padding-left: 10px;
+          background-color: rgba(0, 0, 0, 0.541);color: white;">
+            <h2>德法意瑞欧洲4国</h2>
+            <h2>ABCD任意线路由您挑选</h2>
+            <h4 style="position: absolute;bottom: 20px;right: 20px;">￥<span style="font-size: 40px;">7999</span>/人起</h4>
+          </div>
+        </div> 
+        <div style="position: relative;width: 225px;height: 54px;left: 30%;top: 40px;padding-top: 5px;color: rgb(102,102,102);
+        padding-left: 30px; border: 1px solid rgb(102,102,102);border-radius: 10px;font-size: 30px;">
+        查看更多&nbsp&nbsp
+        <img src="img/hotR.png" alt="">  
+        </div>
+        </div>
+        <div class="tuijian0">
+            <div id="tuijian" class="tuijian">
+              <h1 class="tuijian1">签 证 推 荐</h1>
+              <span class="tuijian2">&nbsp&nbspVisa recommendation</span>        
+            </div>
+            <span class="tuijian3">热门： 日本 马来西亚 美国 意大利 加拿大 新加坡</span>
+        </div>
+        <div class="container container3" style="position: relative;height: 530px;top: 200px;">
+          <div style="position: relative;width: 33.3%;height: 100%;float: left;color: white;">
+            <img src="img/visa1.jpg" alt="" style="width:100%;">
+            <div style="position: absolute;bottom: 0px;width: 100%;height: 13%;background-color: rgba(0, 0, 0, 0.541);
+            padding-left: 18%;padding-top: 8%;font-size: 15px;">
+            日本旅游签证 
+            </div>
+            <h4 style="position: absolute;bottom: 1%;right: 25%;">￥<span style="font-size: 30px;">420</span>/人</h4>
+          </div>
+          <div style="position: relative;width: 33.3%;height: 50%;float: left;color: white;">
+              <img src="img/visa2.jpg" alt="" style="width:100%;height: 100%;">
+            <div style="position: absolute;bottom: 0%;width: 100%;height: 13%;background-color: rgba(0, 0, 0, 0.541);
+            padding-left: 13%;padding-top: 2%;font-size: 16px;">
+            新加坡旅游签证 
+            </div>
+            <h4 style="position: absolute;bottom: -2%;right: 25%;">￥<span style="font-size: 25px;">370</span>/人</h4>
+          </div>
+          <div style="position: relative;width: 33.3%;height: 50%;float: left;color: white;">
+              <img src="img/visa3.jpg" alt="" style="width:100%;height: 100%;">
+              <div style="position: absolute;bottom: 0%;width: 100%;height: 13%;background-color: rgba(0, 0, 0, 0.541);
+            padding-left: 13%;padding-top: 2%;font-size: 16px;">
+            马来西亚旅游签证 
+            </div>
+            <h4 style="position: absolute;bottom: -2%;right: 25%;">￥<span style="font-size: 25px;">450</span>/人</h4>
+          </div>
+          <div style="position: relative;width: 33.3%;height: 50%;float: left;color: white;">
+              <img src="img/visa4.jpg" alt="" style="width:100%;height: 100%;">
+              <div style="position: absolute;bottom: 0%;width: 100%;height: 13%;background-color: rgba(0, 0, 0, 0.541);
+            padding-left: 13%;padding-top: 2%;font-size: 16px;">
+            申根旅游签证 
+            </div>
+            <h4 style="position: absolute;bottom: -2%;right: 25%;">￥<span style="font-size: 25px;">999</span>/人</h4>
+          </div>
+          <div style="position: relative;width: 33.3%;height: 50%;float: left;color: white;">
+              <img src="img/visa5.jpg" alt="" style="width:100%;height: 100%;">
+              <div style="position: absolute;bottom: 0%;width: 100%;height: 13%;background-color: rgba(0, 0, 0, 0.541);
+            padding-left: 13%;padding-top: 2%;font-size: 16px;">
+            美国旅游签证 
+            </div>
+            <h4 style="position: absolute;bottom: -2%;right: 25%;">￥<span style="font-size: 25px;">1380</span>/人</h4>
+          </div>
+        </div>
+        <div style="position: relative; width: 100%; height: 590px;top: 130px;background-color: white;" class="haha">
+        <div style="position: relative; height: 460px;background-color: white;width: 48%;
+        padding-top: 20px;padding-left: 40px;float: left;">
+          <img src="img/visa1.jpg" alt="" style="width: 100%;height: 100%;">
+          <div style="position: absolute;bottom: 0px;width: 89%;height: 15%;padding-left: 10px;
+          background-color: rgba(0, 0, 0, 0.541);color: white;">
+            <h3>日本旅游签证</h3>
+            <h3 style="position: absolute;bottom: 0px;right: 15%;">￥<span style="font-size: 40px;">420</span></h3>
+          </div>
+        </div>
+        <div style="position: relative; height: 460px;background-color: white;width: 50%;
+        padding-top: 20px;left: 2%; float: left;">
+
+        <div style="position: relative;height: 48%;width: 100%;">
+          <img src="img/visa5.jpg" alt="" style="width: 90%;height: 100%;">
+          <div style="position: absolute;bottom: 0px;width: 90%;height: 25%;padding-left: 10px;
+          background-color: rgba(0, 0, 0, 0.541);color: white;">
+            <h3 >美国旅游签证</h3>
+            <h3 style="position: absolute;bottom: 0px;right: 20px;">￥<span style="font-size: 40px;">1380</span></h3>
+          </div>
+        </div>
+
+        <div style="position: relative;height: 48%;width: 100%;top: 4%;">
+            <img src="img/visa2.jpg" alt="" style="width: 90%;height: 100%;">
+            <div style="position: absolute;bottom: 0px;width: 90%;height: 25%;padding-left: 10px;
+            background-color: rgba(0, 0, 0, 0.541);color: white;">
+              <h3>新加坡旅游签证</h3>
+              <h3 style="position: absolute;bottom: 0px;right: 20px;">￥<span style="font-size: 40px;">370</span></h3>
+            </div>
+        </div>
+        </div> 
+        <div style="position: absolute;width: 32%;height: 54px;left: 40%;bottom: 5%;padding-top: 5px;color: rgb(102,102,102);
+        padding-left: 30px; border: 1px solid rgb(102,102,102);border-radius: 10px;font-size: 30px;overflow: hidden;">
+        查看更多&nbsp&nbsp
+        <img src="img/hotR.png" alt="">  
+        </div>
+        </div>    
+        <div class="gengduo0" style="top: 200px;height:200px ;">
+            <div id="remen" class="remen" style="left: 40%;">
+                <div style="position: absolute;width: 80%;height: 54px;bottom: 5%;padding-top: 5px;color: rgb(102,102,102);
+                padding-left: 30px; border: 1px solid rgb(102,102,102);border-radius: 10px;font-size: 30px;overflow: hidden;">
+                查看更多&nbsp&nbsp
+                <img src="img/hotR.png" alt="">  
+            </div>
+        </div>
+        </div>     
+        <div class="shiming0" id="shiming">
+            <div class="shiming">
+              <h1 class="shiming1">使命与愿景</h1>
+              <span class="shiming2">让旅游回归本质，体验纯粹旅游</span>
+              <span class="shiming3">：让旅游回归本质，体验纯粹旅游</span>
+            </div>
+        </div>
+        <div class="cnm">
+          <img src="img/Bbanner.jpg" alt="" style="width: 100%;">
+          <img src="img/back.png" alt="" style="width: 100%;">
+        </div>
+        <div class="container cnmb" style="position: relative; height: 1180px;top: -500px;">
+          <div style="position: relative; height: 350px;width:45%;float: left;">
+            <img src="img/mission1.jpg" alt="" width="100%">
+          </div>
+          <div style="position: relative; height: 350px;width:55%;float: left;background: rgba(28, 80, 128, 0.719)">
+            <h3 style="position: absolute;color: white;top: 20%;left: 30%;">服务理念及优势</h3>
+            <div style="position: absolute;top: 45%;color: white;left: 10%;width: 75%;font-size: 15px;line-height:30px; ">“英华逸游”通过重新打造旅游全程中的产品线路设计，出行交通方案，陪游向导服务，增值关怀项目等，
+              为客户提供高品质的旅游体验，英华逸游在泰国，欧洲，等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。
+            </div>
+          </div>
+          <div style="position: relative; height: 475px;width: 100%;">
+            <img src="img/mission2.jpg" alt="" width="100%">
+          </div>
+          <div style="position: relative; height: 400px;width: 100%;background-color: rgba(28, 80, 128);top: 322px;">
+            <div style="position: relative; height: 400px;width:100%;">
+              <div class="col-lg-4" style="height: 400px;">
+                <img src="img/rorate.png" alt="" style="position: absolute;top: 15%;left: 35%;">
+                <img src="img/icon1.png" alt="" style="position: absolute;top: 26%;left: 52%;">
+                <span style="position: absolute;top: 44%;left: 50%;color: white;font-size: 18px;">品质行程</span>
+              </div>
+              <div class="col-lg-4" style="height: 400px;">
+                <img src="img/rorate.png" alt="" style="position: absolute;top: 15%;left: 20%;">
+                <img src="img/icon2.png" alt="" style="position: absolute;top: 26%;left: 39%;">
+                <span style="position: absolute;top: 44%;left: 36%;color: white;font-size: 18px;">品质消费</span>
+                <span style="position: absolute;top: 74%;left: 36%;color: white;">不推自费，</span>
+                <span style="position: absolute;top: 80%;left: 25%;color: white;">不进辣鸡购物店和伪景点</span>
+              </div>
+              <div class="col-lg-4" style="height: 400px;">
+                <img src="img/rorate.png" alt="" style="position: absolute;top: 15%;right: 35%;">
+                <img src="img/icon3.png" alt="" style="position: absolute;top: 26%;right: 52%;">
+                <span style="position: absolute;top: 44%;right: 50%;color: white;font-size: 18px;">品质小团</span>
+                <span style="position: absolute;top: 74%;right: 43%;color: white;">独立成团不散拼，</span>
+                <span style="position: absolute;top: 80%;right: 35%;color: white;">只跟亲朋好友一起玩，每天发团</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <img src="img/back.png" alt="" style="width: 100%;height: 100%;">
+        </div>
+        <div class="jb container">
+          <img src="img/mission1.jpg" alt="" style="position:absolute ; width: 95%;height: 100%;">
+        </div>
+        <div class="linian container">
+          <h1 style="position: relative; left: 38%;width: 40%;">--服务理念--</h1>
+          <div style="position: relative;top: 10%;line-height:180%;">“英华逸游”通过重新打造旅游全程中的产品线路设计，出行交通方案，陪游向导服务，增值关怀项目等，
+              为客户提供高品质的旅游体验，英华逸游在泰国，欧洲，等多个国家拥有丰富的旅游资源，
+              同时致力于给用户提供性价比高的产品和服务。</div>
+        </div>
+        <div class="mission2 container">
+          <img src="img/mission2.jpg" alt="" style="width: 100%;height: 100%;">
+        </div>
+        <div class="zuihou container">
+          <div class="zuihou1" style="border-bottom: 1px solid rgb(102,102,102)">
+            <div style="position: absolute;height: 20%;width: 50%;left: 18%;top: 60%;">
+              <img src="img/icon11.png" alt="">
+            </div>
+            <h1 style="position: absolute;left: 40%;top: 15%;">
+              --服务优势--
+            </h1>
+            <div style="position: absolute;height: 20%;width: 50%;left: 40%;top: 55%;">
+              旅游达人精心设计，基于口碑反复打磨，告别人山人海鸡肋景点。
+            </div>
+            <span style="position: absolute;height: 20%;width: 50%;left: 40%;top: 78%;">全网最好，敢跟任何产品比</span>
+          </div>
+          <div class="zuihou2" style="border-bottom: 1px solid rgb(102,102,102)">
+              <div style="position: absolute;height: 20%;width: 50%;left: 18%;top: 35%;">
+                  <img src="img/icon22.png" alt="">
+              </div>
+            <span style="position: absolute;height: 20%;width: 50%;left: 40%;top: 35%;">不推自费，</span>
+            <span style="position: absolute;height: 20%;width: 50%;left: 40%;top: 48%;">不进辣鸡购物店和伪景点</span>
+          </div>
+          <div class="zuihou3" style="border-bottom: 1px solid rgb(102,102,102)">
+              <div style="position: absolute;height: 20%;width: 50%;left: 18%;top: 35%;">
+                  <img src="img/icon33.png" alt="">
+              </div>
+            <span style="position: absolute;height: 20%;width: 50%;left: 40%;top: 35%;">独立成团不散拼</span>
+            <span style="position: absolute;height: 20%;width: 50%;left: 40%;top: 48%;">只跟亲朋好友一起玩，每天发团</span>
+          </div>
+        </div>
+        <div class="bottomphone">
+          <div style="position: absolute;left:20%;top:30%;text-align: center;">
+          <h3>苏ICP备14019690号，2014-2017</h3>
+          <h3>@苏州英华国际旅游有限公司 版权所有</h3>
+          <h3>技术支持 杭州联程科技</h3>
+          </div>
+        </div>
+        <div class="bottom">
+            <div style="height: 20%;width:1200px;">
+              <div style="position: absolute; text-align:center;float: left;width: 100px;top: 4%;left: 5%;">合作伙伴</div>
+              <img src="img/cnm.png" alt="" style="position: absolute;left: 14%;top: 4%;">
+              <div style="position: absolute;left: 12%;top: 12%; width: 400px;height: 36px;">
+                <div class="col-lg-3" style="text-align: center;">携程网</div>
+                <div class="col-lg-3">阿里飞猪</div>
+                <div class="col-lg-2">去哪</div>
+                <div class="col-lg-4">苏州旅游局</div>
+              </div>
+            </div>
+            <div style="height: 15%;width:1200px;">
+                <div style="position: absolute; text-align:center;float: left;width: 100px;top: 23%;left: 5%;">热门位置</div>
+                <div class="ken1" style="position: absolute;left: 10%; float: left;width: 85%;height: 100px;">
+                  <ul style="position: relative;width:100%;height: 100%;">
+                    <li> 韩国</li>
+                    <li>缅甸</li>
+                    <li>菲律宾 </li>
+                    <li> 越南</li>
+                    <li>老欧 </li>
+                    <li> 柬埔寨</li>
+                    <li> 泰国 </li>
+                    <li> 马来西亚</li>
+                    <li> 新加坡 </li>
+                    <li> 印度尼西亚 </li>
+                    <li> 欧盟</li>
+                    <li> 斯里兰卡 </li>
+                    <li> 土耳其 </li>
+                    <li> 阿联酋 </li>
+                    <li> 西班牙 </li>
+                    <li> 意大利 </li>
+                    <li> 希腊 </li>
+                    <li> 法国 </li>
+                    <li> 比利时</li>
+                    <li> 荷兰 </li>
+                    <li> 英国</li>
+                    <li> 瑞士 </li>
+                    <li> 奥地利 </li>
+                    <li> 德国 </li>
+                    <li> 匈牙利 </li>
+                    <li> 俄罗斯 </li>
+                    <li> 杰克 </li>
+                    <li> 芬兰 </li>
+                    <li> 葡萄牙 </li>
+                    <li> 冰岛 </li>
+                    <li> 美国 </li>
+                    <li> 加拿大 </li>
+                    <li> 巴西 </li>
+                    <li> 阿根廷 </li>
+                    <li> 澳大利亚 </li>
+                    <li> 新西兰 </li>
+                </ul></div>
+            </div>
+            <div style="height: 10%;width:1200px;">
+                  <div style="position: absolute; margin-top:40px;text-align:center;float: left;width: 100px;top: 31%;left: 5%;">主题服务</div>
+                  <div class="ken1" style="position: absolute;left: 10%; float: left;width: 85%;height: 100px;">
+                    <ul style="position: relative;width:100%;height: 100%;">
+                      <li>海岛文化</li>
+                      <li> 历史文化 </li>
+                      <li> 探索冒险 </li>
+                      <li> 美食购物 </li>
+                      <li> 都市生活 </li>
+                      <li> 海外游学 </li>
+                      <li> 邮轮度假 </li>
+                      <li> 蜜月摄影 </li>
+                      <li> 亲子乐园 </li>
+                    </ul>
+                  </div>
+            </div>
+            <div style="height: 20%;width:1200px;">
+                  <div style="position: absolute; margin-top:40px;text-align:center;float: left;width: 100px;top: 41%;left: 5%;">友情链接</div>
+                  <div class="ken3" style="position: absolute;left: 10%; float: left;width: 85%;height: 100px;">
+                      <ul style="position: relative;width:100%;height: 100%;">
+                          <li> 马蜂窝 </li>
+                          <li> 穷游 </li>
+                          <li> booking </li>
+                          <li> 苏州旅游局 </li>
+                          <li> 驴友网 </li>
+                          <li> 与爱全球签证中心 </li>
+                          <li> 酒店团购 </li>
+                          <li> 携程旅游攻略 </li>
+                          <li> 天巡智航在线 </li>
+                          <li>中国旅游网</li>
+                          <li> 奥乐网 </li>
+                          <li> 背包兔旅游行程 </li>
+                          <li> 出境旅游 </li>
+                          <li> 国际酒店 </li>
+                          <li> 广州旅行社 </li>
+                          <li> 517旅游 </li>
+                          <li> 花生网 </li>
+                          <li> 家园网 </li>
+                          <li> 海外婚礼 </li>
+                        </ul>
+                  </div>
+            </div>
+            <div style="position: absolute;width: 100%;bottom: 0%;height: 30%;border-top: 1px solid white;">
+              <div style="position: absolute;left:30%;top: 30%;">
+                  苏ICP备14019690号，2014-2017 @苏州英华国际旅游有限公司 版权所有 
+              </div>
+            </div>
+        </div>
+    <script src="js/jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
